@@ -9,7 +9,9 @@ require_once ROOT_PATH . DS . 'vendor' . DS . 'autoload.php';
 
 $autoloader = Zend_Loader_Autoloader::getInstance();
 $application = new Zend_Application(APP_ENV, SRC_PATH . '/application/Core/configs/application.ini');
-$application->bootstrap()->run();
+$application
+    ->bootstrap()
+    ->run();
 
 
 

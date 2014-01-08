@@ -11,7 +11,7 @@
 class ContactController extends Zend_Controller_Action
 {
     
-    public function contactAction()
+    public function indexAction()
     {
         
     }

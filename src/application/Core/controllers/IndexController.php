@@ -2,7 +2,7 @@
 
 /**
  * 
- * Controller par dÃ©faur de l'application
+ * Controller par défaur de l'application
  * 
  * @category    App1
  * @package     Core

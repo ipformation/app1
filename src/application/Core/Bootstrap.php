@@ -6,7 +6,7 @@
  * @category    App1
  * @package     Core
  * @desc        Bootstrap du module Core
- * @author      tarik <malouli.tarik@gmail.com>
+ * @author      jb <jb@ipformation-lyon.com>
  *  
  */
 class Core_Bootstrap extends Zend_Application_Module_Bootstrap
