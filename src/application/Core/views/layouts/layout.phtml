@@ -1,23 +1,21 @@
-<!DOCTYPE html>
+<?= $this->doctype(); ?>
 <html class="no-js">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+    	<?php 
+    		$this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1, maximum-scale=1'); 
+         	echo $this->headMeta() . PHP_EOL;
+         	echo $this->headTitle('App1')->setSeparator(' - ') . PHP_EOL;
+         	$this->headLink()->appendStylesheet('/css/bootstrap.min.css') . PHP_EOL;
+         	$this->headStyle('body { padding-top: 50px; padding-bottom: 20px; }') . PHP_EOL;
+         	echo $this->headStyle() . PHP_EOL;
+         	$this->headLink()->appendStylesheet('/css/bootstrap-theme.min.css') . PHP_EOL;
+         	$this->headLink()->appendStylesheet('/css/main.css') . PHP_EOL;
+         	echo $this->headLink() . PHP_EOL;
+         	$this->headScript()->appendFile('/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') . PHP_EOL;
+         	echo $this->headScript() . PHP_EOL; 
+         ?>
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -61,46 +59,20 @@
       </div>
     </div>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-      </div>
-    </div>
+
 
     <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-        </div>
-      </div>
+    	<?=  $this->layout()->content; ?>
+    </div> <!-- /container -->   
+    
+	    <?php
+	    	$this->inlineScript()->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+	    	$this->inlineScript()->appendScript('window.jQuery || document.write(\'<script src="js/vendor/jquery-1.10.1.min.js"><\/script>\')') ;
+	    	$this->inlineScript()->appendFile('js/vendor/bootstrap.min.js') ;
+	    	$this->inlineScript()->appendFile('js/plugins.js') ;
+	    	$this->inlineScript()->appendFile('js/main.js') ;
+	    	echo $this->inlineScript();
+	    ?>
 
-      <hr>
-
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
-        <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
     </body>
 </html>
